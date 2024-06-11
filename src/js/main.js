@@ -328,13 +328,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-// Получаем все блоки .popup__block на странице
 const popupBlocks = document.querySelectorAll('.popup__block');
 
-// Функция для удаления класса active у всех элементов внутри текущего popupBlock
 function deactivateAll(popupBlock) {
     const dropdownItems = popupBlock.querySelectorAll('.dropdown__item, .dropdown__elem');
     dropdownItems.forEach(item => {
@@ -343,26 +338,24 @@ function deactivateAll(popupBlock) {
     });
 }
 
-// Добавляем обработчик клика для каждого popupBlock
 popupBlocks.forEach(popupBlock => {
     const dropdownItems = popupBlock.querySelectorAll('.dropdown__item, .dropdown__elem');
 
-    // Добавляем обработчик клика для каждого элемента внутри текущего popupBlock
+    
     dropdownItems.forEach(item => {
         item.addEventListener('click', (event) => {
-            // Убираем класс active у всех элементов внутри текущего popupBlock
+            
             deactivateAll(popupBlock);
 
-            // Добавляем класс active только к текущему элементу
+            
             item.classList.add('active');
             item.classList.add('open');
 
-            // Остановить всплытие события, чтобы клик не срабатывал на document
             event.stopPropagation();
         });
     });
 
-    // Добавляем обработчик клика на документ для закрытия всех dropdown при клике вне них
+    
     document.addEventListener('click', () => {
         deactivateAll(popupBlock);
     });
