@@ -13,18 +13,16 @@
     font-style: normal;
 }
 
-
-/*
 @font-face {
-    font-family: "Roboto";
-     src: url('Roboto-Bold.woff') format('woff'), url('Roboto-Bold.woff2') format('woff2');
-    font-weight: 700;
+    font-family: "DM Sans";
+     src: url('DMSans-Medium.woff') format('woff'), url('DMSans-Medium.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto";
-     src: url('Roboto-Black.woff') format('woff'), url('Roboto-Black.woff2') format('woff2');
-    font-weight: 900;
+    font-family: "DM Sans";
+     src: url('DMSans-Bold.woff') format('woff'), url('DMSans-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
-}*/
+}
