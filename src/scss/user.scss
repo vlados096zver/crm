@@ -1,0 +1,336 @@
+@import 'responsive';
+
+.user { 
+	&--reg {
+		background-color: #FEF9F3;
+		.title {
+			text-align: left;
+		}
+		.user__holder {
+			@include media(mdx) {
+				padding-top: 0;	
+				margin-top: -28px;
+			}
+		}
+
+	}
+	&--login {
+		.user__desc {
+			padding-top: 20px;
+		}
+		.user__btn {
+			margin-top: 40px;
+			@include media(sm) {
+				margin-top: 12px;
+			}
+		}
+	}
+	&__inner {
+		position: relative;
+		min-height: 100vh;
+	}
+	&__holder,
+	&__content {
+		padding: 80px 0;
+	}
+	&__holder {
+		position: relative;
+		z-index: 2;
+		max-width: 454px;
+		width: 100%;	
+		@include media(mdx) {
+			max-width: 100%;
+			padding-top: 24px;	
+			padding-bottom: 18px;	
+		}
+	}
+	&__wrap {
+		display: flex;	
+		align-items: center;
+		gap: 0 20px;
+		padding-top: 44px;
+		margin-bottom: 30px;	
+		@include media(sm) {
+			padding-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&__form {
+		display: flex;	
+		flex-direction: column;
+		gap: 30px 0;
+		margin-bottom: 30px;
+	    @include media(sm) {
+	    	gap: 20px 0;
+	    	margin-bottom: 20px;
+	    }
+	}
+	&__desc {
+		font-size: 14px;
+		line-height: 1.7;
+		color: rgb(163, 174, 208);
+		margin-bottom: 20px;
+		font-family: Public Sans, sans-serif;
+		@include media(sm) {
+			display: none;
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&__btn {
+		display: block;
+		width: 100%;
+		font-size: 20px;
+		line-height: 1.5;
+		color: #fff;
+		border-radius: 20px;
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+		background: linear-gradient(90.00deg, rgb(112, 169, 255),rgb(49, 110, 201) 57%,rgb(1, 73, 180) 100%);
+		padding: 17px 10px;
+		border: none;
+		@include media(sm) {
+			font-size: 16px;
+			padding: 8px 34px;
+			width: max-content;
+			margin: 0 auto;
+		}
+	}
+	&__input {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		&:checked {
+			&+.user__save {
+				&:before {
+					position: absolute;
+					content: '';
+					z-index: 2;
+					top: 50%;
+					left: 6px;
+					width: 30px;
+					height: 30px;
+					transform: translateY(-50%);
+					background-image: url(../../src/img/icons/mark.svg);
+					background-repeat: no-repeat;
+					background-position: left center;
+					background-size: 17px 12px;
+					@include media(sm) {
+						width: 22px;
+						height: 22px;
+						left: 3px;
+					}
+				}
+			}
+		}
+	}
+	&__save {
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+		font-size: 20px;
+		line-height: 1.3;
+		color: #000;
+		padding-left: 50px;
+		margin-bottom: 8px;
+		font-family: DM Sans, sans-serif;
+		@include media(sm) {
+			font-size: 12px;
+			padding-left: 34px;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			border-radius: 5px;
+			transform: translateY(-50%);
+			background: rgb(46, 101, 243);
+			@include media(sm) {
+				width: 22px;
+				height: 22px;
+			}
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&__block {
+		position: relative;
+	}
+	&__eye {
+		position: absolute;
+		cursor: pointer;
+		width: 64px;
+		height: 64px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		right: 0px;
+		@include media(sm) {
+			width: 40px;
+			height: 40px;
+			display: none;	
+		}
+	}
+	&__content {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		height: 100%;
+		padding-top: 224px;
+		padding-bottom: 150px;
+		max-width: 64%;
+		width: 100%;
+		padding-right: 174px;
+		@media (min-width: 1928px) {
+			max-width: 1234px;
+		}
+		@include media(lgb) {
+			max-width: 68%;
+		}
+		@include media(lg) {
+			max-width: 63%;
+		}
+		@include media(lgk) {
+			padding-right: 154px;	
+		}
+		@include media(lgxs) {
+			max-width: 57%;
+			padding-right: 40px;	
+		}
+		@include media(mdx) {
+			max-width: 100%;
+			position: relative;
+			display: flex;	
+			align-items: center;
+			padding-left: 20%;	
+			padding-top: 33px;
+			padding-bottom: 53px;	
+		}
+		@include media(sm) {
+			padding-left: 10%;	
+		}
+		@include media(xxs) {
+			padding-left: 0;	
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;	
+			-webkit-clip-path: url(#clip-main);
+			clip-path: url(#clip-main);
+			background: linear-gradient(90.00deg, rgb(112, 169, 255),rgb(81, 140, 228) 57%,rgb(1, 73, 180) 100%);
+			background-size: cover;
+			@include media(mdx) {
+				-webkit-clip-path: url(#clip-mob-main);
+				clip-path: url(#clip-mob-main);	
+			}
+		}
+	}
+	&__image,
+	&__text {
+		position: relative;
+		z-index: 2;
+		max-width: 444px;
+		width: 100%;
+		margin-left: auto;
+		@include media(lg) {
+			max-width: 354px;
+		}
+		@include media(mdx) {
+			max-width: initial;
+			width: auto;
+			margin-left: 0;	
+		}
+	}
+	&__image {
+		user-select: none;
+		margin-bottom: 40px;
+		@include media(mdx) {
+			margin-bottom: 0;	
+			margin-left: 35px;	
+			margin-right: 14px;	
+		}
+		@include media(sm) {
+			position: relative;
+			z-index: 2;
+			max-width: 68px;
+			margin-left: 35px;	
+			margin-right: 15px;	
+			background-color: #fff;
+			border-radius: 50%;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+	&__text {
+		font-size: 100px;
+		line-height: 1.3;
+		color: #fff;
+		text-align: center;
+		font-family: DM Sans, sans-serif;
+		@include media(lg) {
+			font-size: 80px;
+		}
+		@include media(lgk) {
+			font-size: 66px;	
+		}
+		@include media(mdx) {
+			font-size: 54px;
+		}
+		@include media(sm) {
+			font-size: 32px;
+		}
+	}
+	&__info {
+		font-size: 16px;
+		line-height: 1.2;
+		color: rgb(163, 174, 208);
+		text-align: center;
+		padding-top: 8px;
+		font-family: Public Sans, sans-serif;
+		@include media(sm) {
+			font-size: 12px;
+		}
+	}
+	&__forget {
+		flex-basis: 100%;
+		cursor: pointer;
+		width: max-content;
+		font-size: 16px;
+		line-height: 1.2;
+		color: #2E65F3;
+		text-align: right;
+		margin-left: auto;
+		margin-top: 10px;
+		font-family: Public Sans, sans-serif;
+		@include media(sm) {
+			flex-basis: auto;
+			order: 2;
+			margin-left: auto;
+			margin-top: 0;
+			font-size: 12px;
+		}
+	}
+	&__box {
+		@include media(sm) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+}

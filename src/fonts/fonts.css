@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: "Public Sans";
+     src: url('PublicSans-Regular.woff') format('woff'), url('PublicSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Sans";
+     src: url('DMSans-Regular.woff') format('woff'), url('DMSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*
+@font-face {
+    font-family: "Roboto";
+     src: url('Roboto-Bold.woff') format('woff'), url('Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+     src: url('Roboto-Black.woff') format('woff'), url('Roboto-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}*/

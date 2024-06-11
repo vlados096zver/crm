@@ -1,0 +1,248 @@
+@import 'responsive.scss';
+
+.about {
+	&+.table {
+		padding-top: 15px;
+		@include media(mdx) {
+			padding-top: 0;
+		}
+	}
+	@include media(mdx) {
+		display: flex;
+		align-items: flex-start;
+		padding-right: 10px;
+		padding-top: 54px;
+	}
+	@include media(sm) {
+		padding-top: 26px;
+	}
+	&__holder {
+		min-height: 296px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px 0;
+		margin-bottom: 30px;
+		@include media(sm) {
+			gap: 12px 0;
+			margin-bottom: 20px;
+		}
+	}
+	&__title {
+		font-size: 20px;
+		color: #2A578B;
+		@include media(mdx)  {
+			font-size: 35px;
+			color: #000000;
+		}
+		@include media(sm) {
+			font-size: 17px;	
+		}
+		span {
+			display: inline-block;
+			min-width: 168px;
+			color: #434343;
+			@include media(mdx)  {
+				display: block;
+				font-size: 45px;
+				color: #000000;
+			}
+			@include media(sm) {
+				font-size: 22px;	
+			}
+		}
+	}
+	&__inner {
+		max-width: 950px;
+		width: 100%;
+		min-height: 455px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		gap: 30px 0;
+		align-items: flex-end;
+		padding: 20px 30px;
+		padding-left: 158px;
+		padding-top: 156px;
+		background: linear-gradient(90deg, rgba(112, 169, 255, 0.8), rgba(49, 110, 201, 0.8) 57%, rgba(1, 73, 180, 0.8) 100%);
+		background-size: cover;
+		-webkit-clip-path: url(#clip-about);
+		clip-path: url(#clip-about);
+		@include media(desc) {
+			max-width: 850px;
+		}
+		@include media(lgb) {
+			max-width: 750px;
+		}
+		@include media(lg) {
+			max-width: 700px;
+			min-height: 420px;
+		}
+		@include media(lgm) {
+			max-width: 600px;
+			flex-wrap: wrap;
+		}
+		@include media(lgk) {
+			max-width: 500px;
+			padding-left: 94px;
+		}
+		@include media(lgxs) {
+			max-width: 340px;
+		}
+		@include media(mdx) {
+			position: static;
+			width: 235px;
+			max-width: 100%;
+			min-height: auto;
+			background: none;
+			padding: 0;
+			clip-path: none;
+			-webkit-clip-path: none;
+		}
+		@include media(sm) {
+			width: 114px;
+			gap: 15px 0;
+		}
+	}
+	&__image {
+		max-width: 275px;
+		width: 100%;
+		margin-right: 42px;
+		@include media(lgb) {
+			max-width: 190px;
+		}
+		@include media(lg) {
+			max-width: 140px;
+		}
+		@include media(mdx) {
+			margin: 0 auto;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+	&__btn {
+		cursor: pointer;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		font-size: 16px;
+		line-height: 1.2;
+		border: none;
+		border-radius: 20px;
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+		padding: 15px 10px;
+		font-family: Public Sans, sans-serif;
+		@include media(mdx) {
+			padding: 20px 10px;
+		}
+		@include media(sm) {
+			padding: 10px 10px;
+		}
+	
+		&--edit {
+			max-width: 255px;
+			margin-right: 20px;
+			@include media(mdx) {
+				max-width: 568px;
+				margin-right: 0;
+			}
+			@include media(sm) {
+				max-width: 275px;
+			}
+		}
+		&--exit {
+			max-width: 154px;
+			margin-right: 10px;
+		}
+		&--logout {
+			max-width: 154px;
+			background-color: #124897;
+			color: #fff;
+		}
+		&--save,
+		&--exit {
+			color: #434343;
+			background-color: #F1F4FF;
+		}
+		&--save {
+			max-width: 220px;
+			@include media(mdx) {
+				max-width: 468px;
+			}
+			@include media(sm) {
+				max-width: 228px;
+			}
+		}
+		&--del {
+			max-width: 280px;
+		}
+		&--edit,
+		&--del {
+			color: #fff;
+			background-color: #2E65F3;
+		}
+
+		&--del,
+		&--exit {
+			@include media(mdx) {
+				max-width: 232px;
+			}
+		}
+		@include media(mdx) {
+			font-size: 33px;
+			box-shadow: 0px 8.27px 41.33px 0px rgba(0, 0, 0, 0.25);
+			color: #fff;
+			background: linear-gradient(90.00deg, rgb(112, 169, 255),rgb(49, 110, 201) 57%,rgb(1, 73, 180) 100%);
+		}
+		@include media(sm) {
+			font-size: 16px;
+		}
+		span {
+			@include media(mdx) {
+				display: none;
+			}
+		}
+	}
+	&__info {
+		display: flex;
+		margin-bottom: 66px;
+		@include media(lgxs) {
+			flex-direction: column;
+			gap: 20px 0;
+		}
+		@include media(mdx) {
+			align-items: center;
+			margin-bottom: 44px;
+		}
+		@include media(sm) {
+			margin-bottom: 16px;
+		}
+	}
+	&__box {
+		max-width: 360px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		@include media(lgxs) {
+			flex-direction: column;
+			gap: 30px 0;
+			align-items: flex-start;
+		}
+		@include media(mdx) {
+			align-items: center;
+		}
+		@include media(sm) {
+			gap: 15px 0;
+		}
+	}
+	&__row {
+		@include media(mdx) {
+			width: calc(100% - 235px);
+		}
+		@include media(sm) {
+			width: calc(100% - 114px);
+		}
+	}
+}

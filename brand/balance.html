@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Баланс</title>
+
+        <link rel="stylesheet" href="../src/fonts/fonts.css">
+        <link rel="stylesheet" href="../src/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../dist/css/styles.css">
+    </head>
+    <body>
+
+<svg class="svg">
+        <clipPath id="clip-about" clipPathUnits="objectBoundingBox">
+          <path d="M0.003,0.141 C-0.009,0.069,0.017,-0.006,0.054,-0.006 L1,-0.002 V0.994 H0.191 C0.168,0.994,0.148,0.965,0.14,0.921 L0.003,0.141"></path>
+        </clipPath>
+        <clipPath id="clip-main" clipPathUnits="objectBoundingBox"><path d="M0.039,0 H0.039 L0.039,0 L0.032,0.002 L0.032,0.002 L0.032,0.002 L0.021,0.007 L0.021,0.007 L0.021,0.007 L0.011,0.015 L0.011,0.015 L0.011,0.015 L0.005,0.026 L0.005,0.026 L0.005,0.026 L0.001,0.035 L0.001,0.035 L0.001,0.036 L0,0.047 L0,0.047 L0,0.047 L0,0.052 C0.001,0.052,0.001,0.053,0.001,0.053 L0.001,0.059 L0.001,0.059 L0.001,0.059 L0.003,0.062 C0.004,0.065,0.005,0.068,0.007,0.071 L0.007,0.073 L0.01,0.079 L0.01,0.079 L0.01,0.079 L0.116,0.269 L0.116,0.269 L0.512,0.982 L0.512,0.982 L0.512,0.982 L0.515,0.985 C0.518,0.988,0.52,0.99,0.524,0.993 L0.526,0.995 L0.526,0.995 L0.526,0.995 L0.53,0.997 C0.532,0.997,0.533,0.998,0.535,0.998 L0.537,0.999 L0.537,0.999 L0.537,0.999 L0.547,1 L0.547,1 H0.547 H0.569 L1,1 L1,1 V1 V0.001 V0 H1 H0.039 M1,1 H0.546 C0.542,1,0.538,0.999,0.535,0.998 L0.53,0.997 C0.528,0.995,0.526,0.994,0.524,0.993 L0.515,0.985 C0.513,0.983,0.512,0.98,0.511,0.978 L0.007,0.073 L0.003,0.062 C0.002,0.059,0.001,0.056,0.001,0.053 L0,0.052 C-0.002,0.026,0.016,0.001,0.042,0.001 H1 L1,1 M0.032,0.003 L0.039,0.001 H0.999 V0.999 L0.569,1 H0.547 L0.537,0.998 L0.526,0.994 L0.513,0.981 L0.117,0.269 L0.117,0.269 L0.011,0.078 L0.002,0.059 L0.001,0.047 L0.002,0.036 L0.005,0.027 L0.012,0.016 L0.022,0.007 L0.032,0.003"></path></clipPath>
+        <clipPath id="clip-mob-main" clipPathUnits="objectBoundingBox"><path d="M0.044,0.003 H0.044 L0.044,0.003 L0.025,0.016 L0.025,0.017 L0.025,0.017 L0.012,0.046 L0.012,0.047 L0.012,0.047 L0.01,0.056 C0.006,0.069,0.004,0.083,0.003,0.098 L0.002,0.105 L0.001,0.106 V0.106 V0.135 V0.136 L0.002,0.137 L0.007,0.175 L0.007,0.176 L0.008,0.177 L0.025,0.212 L0.025,0.212 L0.025,0.212 L0.051,0.251 L0.051,0.251 L0.149,0.396 L0.149,0.396 L0.548,0.99 L0.548,0.99 L0.548,0.99 L0.571,1 L0.571,1 H0.571 H0.611 H1 H1 V1 V0.006 V0.003 H1 H0.044 M0.003,0.098 C0,0.137,0.006,0.181,0.024,0.208 L0.539,0.973 C0.551,0.991,0.565,1,0.579,1 H1 V0.006 H0.051 C0.032,0.006,0.018,0.027,0.01,0.056 L0.003,0.098 M0.026,0.022 L0.045,0.01 H0.999 V0.997 H0.611 H0.572 L0.549,0.984 L0.151,0.391 L0.151,0.391 L0.052,0.246 L0.052,0.246 L0.027,0.207 L0.01,0.172 L0.004,0.135 V0.107 L0.014,0.05 L0.026,0.022"></path></clipPath>
+      </svg>
+
+
+      <div class="content__wrap">
+        <div class="content__aside">
+          <a href="#" class="content__logo"> 
+            <div class="content__image"> 
+             <img src="../src/img/icons/logo.svg" alt="dlogo">
+            </div>
+            <p class="content__desc">Neurolide</p>
+          </a>
+          <div class="mobile-wrap">
+            <div class="main-nav__toggle">
+              <span class="line-burger"></span>
+            </div>
+          </div>
+          <ul class="content__list">  
+            <li>
+              <a href="brand.html" class="content__link">
+                <img src="../src/img/icons/menu/manager.svg" alt="manager">
+                <span>Бренд</span>
+              </a>
+           </li>
+            <li>
+              <a href="add-offers.html" class="content__link">
+                <img src="../src/img/icons/menu/user.svg" alt="user">
+                <span>Додані офери</span>
+              </a>
+            </li>
+            <li>
+              <a href="media.html" class="content__link">
+                <img src="../src/img/icons/menu/media.svg" alt="media">
+                <span>Медіа канали</span>
+              </a>
+            </li>
+            <li>
+              <a href="offers.html" class="content__link">
+                <img src="../src/img/icons/menu/media.svg" alt="media">
+                <span>Офери</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html" class="content__link">
+                <img src="../src/img/icons/menu/profile.svg" alt="profile">
+                <span>Профіль</span>
+              </a>
+            </li>
+            <li>
+              <a href="balance.html" class="content__link active">
+                <img src="../src/img/icons/menu/balance.svg" alt="balance">
+                <span>Баланс</span>
+              </a>
+            </li>
+            <li>
+              <a href="support.html" class="content__link">
+                <img src="../src/img/icons/menu/support.svg" alt="support">
+                <span>Технічна  підтримка</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content__title">
+          <div class="content__icon"> 
+             <img src="../src/img/icons/menu/balance.svg" alt="balance">
+          </div>
+          <span>Баланс</span>
+        </div>
+        <div class="content__block">
+          <div class="content__bg"></div>
+          <section class="numbers">
+              <div class="numbers__wrap">
+                <div class="numbers__item">
+                  <p class="numbers__title">Індекс</p>
+                  <p class="numbers__count">601,78</p>
+                </div>
+                <div class="numbers__item">
+                  <p class="numbers__title">Зачислення</p>
+                  <p class="numbers__count">3002,49</p>
+                </div>
+                <div class="numbers__item">
+                  <p class="numbers__title">Бюджет</p>
+                  <p class="numbers__count">216</p>
+                </div>
+                <div class="numbers__item">
+                  <p class="numbers__title">Сповіщення</p>
+                  <p class="numbers__count">212</p>
+                </div>
+              </div>
+          </section>
+
+          <section class="balance">
+            <div class="container container--inner">
+              <div class="balance__transaction">
+                <p class="table__subtitle">Платіжний метод</p>
+                <div class="balance__btn add-card">Додати карту</div>
+              </div>
+              <div class="swiper-balance swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="balance__item">
+                      <div class="balance__row">
+                        <p class="balance__value">$95, 400.00 <span>USD</span></p>
+                        <div class="balance__image">
+                          <img src="../src/img/icons/visa.svg" alt="visa">
+                        </div>
+                      </div>
+                      <div class="balance__inner">
+                        <p class="balance__number">****  ****  ****  3814</p>
+                        <div class="balance__copy">
+                          <img src="../src/img/icons/copy.svg" alt="copy">
+                        </div>
+                        <div class="balance__block">
+                          <p class="balance__expires">Expires</p>
+                          <p class="balance__data">04 / 24</p>
+                        </div>
+                      </div>
+                      <div class="balance__info">
+                        <p class="balance__fio">Kevin Gilbert</p>
+                        <button class="balance__eye">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 10.5C5.17157 10.5 4.5 11.1716 4.5 12C4.5 12.8284 5.17157 13.5 6 13.5C6.82843 13.5 7.5 12.8284 7.5 12C7.5 11.1716 6.82843 10.5 6 10.5Z" fill="white"/>
+                          <path d="M10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12Z" fill="white"/>
+                          <path d="M16.5 12C16.5 11.1716 17.1716 10.5 18 10.5C18.8284 10.5 19.5 11.1716 19.5 12C19.5 12.8284 18.8284 13.5 18 13.5C17.1716 13.5 16.5 12.8284 16.5 12Z" fill="white"/>
+                          </svg>
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="balance__item">
+                      <div class="balance__row">
+                        <p class="balance__value">$95, 400.00 <span>USD</span></p>
+                        <div class="balance__image">
+                          <img src="../src/img/icons/visa.svg" alt="visa">
+                        </div>
+                      </div>
+                      <div class="balance__inner">
+                        <p class="balance__number">****  ****  ****  3814</p>
+                        <div class="balance__copy">
+                          <img src="../src/img/icons/copy.svg" alt="copy">
+                        </div>
+                        <div class="balance__block">
+                          <p class="balance__expires">Expires</p>
+                          <p class="balance__data">04 / 24</p>
+                        </div>
+                      </div>
+                      <div class="balance__info">
+                        <p class="balance__fio">Kevin Gilbert</p>
+                        <button class="balance__eye">
+                          <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 10.5C5.17157 10.5 4.5 11.1716 4.5 12C4.5 12.8284 5.17157 13.5 6 13.5C6.82843 13.5 7.5 12.8284 7.5 12C7.5 11.1716 6.82843 10.5 6 10.5Z" fill="white"/>
+                          <path d="M10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12Z" fill="white"/>
+                          <path d="M16.5 12C16.5 11.1716 17.1716 10.5 18 10.5C18.8284 10.5 19.5 11.1716 19.5 12C19.5 12.8284 18.8284 13.5 18 13.5C17.1716 13.5 16.5 12.8284 16.5 12Z" fill="white"/>
+                          </svg>
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>
+              <div class="balance__wrap">
+                <div class="balance__item">
+                  <div class="balance__row">
+                    <p class="balance__value">$95, 400.00 <span>USD</span></p>
+                    <div class="balance__image">
+                      <img src="../src/img/icons/visa.svg" alt="visa">
+                    </div>
+                  </div>
+                  <div class="balance__inner">
+                    <p class="balance__number">****  ****  ****  3814</p>
+                    <div class="balance__copy">
+                      <img src="../src/img/icons/copy.svg" alt="copy">
+                    </div>
+                    <div class="balance__block">
+                      <p class="balance__expires">Expires</p>
+                      <p class="balance__data">04 / 24</p>
+                    </div>
+                  </div>
+                  <div class="balance__info">
+                    <p class="balance__fio">Kevin Gilbert</p>
+                    <button class="balance__eye">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 10.5C5.17157 10.5 4.5 11.1716 4.5 12C4.5 12.8284 5.17157 13.5 6 13.5C6.82843 13.5 7.5 12.8284 7.5 12C7.5 11.1716 6.82843 10.5 6 10.5Z" fill="white"/>
+                      <path d="M10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12Z" fill="white"/>
+                      <path d="M16.5 12C16.5 11.1716 17.1716 10.5 18 10.5C18.8284 10.5 19.5 11.1716 19.5 12C19.5 12.8284 18.8284 13.5 18 13.5C17.1716 13.5 16.5 12.8284 16.5 12Z" fill="white"/>
+                      </svg>
+                    </button> 
+                  </div>
+                </div>
+                <div class="balance__item">
+                  <div class="balance__row">
+                    <p class="balance__value">$87, 580.00 <span>USD</span></p>
+                    <div class="balance__image">
+                      <img src="../src/img/icons/mastercard.svg" alt="mastercard">
+                    </div>
+                  </div>
+                  <div class="balance__inner">
+                    <p class="balance__number">****  ****  ****  5468</p>
+                    <div class="balance__copy">
+                      <img src="../src/img/icons/copy.svg" alt="copy">
+                    </div>
+                    <div class="balance__block">
+                      <p class="balance__expires">Expires</p>
+                      <p class="balance__data">12 / 22</p>
+                    </div>
+                  </div>
+                  <div class="balance__info">
+                    <p class="balance__fio">Kevin Gilbert</p>
+                    <button class="balance__eye">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 10.5C5.17157 10.5 4.5 11.1716 4.5 12C4.5 12.8284 5.17157 13.5 6 13.5C6.82843 13.5 7.5 12.8284 7.5 12C7.5 11.1716 6.82843 10.5 6 10.5Z" fill="white"/>
+                      <path d="M10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12Z" fill="white"/>
+                      <path d="M16.5 12C16.5 11.1716 17.1716 10.5 18 10.5C18.8284 10.5 19.5 11.1716 19.5 12C19.5 12.8284 18.8284 13.5 18 13.5C17.1716 13.5 16.5 12.8284 16.5 12Z" fill="white"/>
+                      </svg>
+                    </button> 
+                  </div>
+                </div>
+                <div class="balance__item balance__item--add add-card">
+                  <div class="balance__plus">
+                    <img src="../src/img/icons/plus.svg" alt="plus">
+                  </div>
+                  <p class="balance__text">Додати нову карту</p>
+                </div>
+              </div>
+              <div class="balance__user">
+                <p class="table__subtitle">Особистий баланс</p>
+                <div class="balance__wrap-btn">
+                  <button type="button" class="balance__btn top_up-balance">Поповнити баланс</button>
+                  <button type="button" class="balance__btn show-balance">Вивести баланс</button>
+                </div>
+                <div class="balance__grid">
+                  <div class="balance__elem">
+                    <p class="balance__title">Баланс</p>
+                    <p class="balance__sum">$85,400.00</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="balance__user">
+               <p class="table__subtitle">Історія платежів</p>
+              </div>
+              <div class="static__wrap">
+                <table class="static__table">
+                  <tr>
+                    <th>Номер</th>
+                    <th>Дата рахунку</th>
+                    <th>Дата оплати</th>
+                    <th>Статус</th>
+                    <th>Спосіб оплати</th>
+                    <th>Підписка</th>
+                    <th>Сума</th>
+                  </tr>
+                  <tr>
+                    <td>EKG464SJFN17</td>
+                    <td>10 грудня 2024 р.</td>
+                    <td>10 грудня 2024 р</td>
+                    <td><span class="static__status static__status--go">Прямує до</span></td>
+                    <td>0077 **** **** 3814 (Visa)</td>
+                    <td>Бонус (річний)</td>
+                    <td>$129.88</td>
+                  </tr>
+                  <tr>
+                    <td>EKG464SJFN17</td>
+                    <td>10 грудня 2024 р.</td>
+                    <td>10 грудня 2024 р</td>
+                    <td><span class="static__status static__status--end">Завершено</span></td>
+                    <td>0077 **** **** 3814 (Visa)</td>
+                    <td>Бонус (річний)</td>
+                    <td>$129.88</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="slider">
+               <div class="swiper-mob swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="slider__box">
+                        <div class="slider__content">
+                          <p class="slider__elem">Статус</p>
+                          <span class="static__status static__status--go">Прямує до</span>
+                        </div>
+                        <div class="slider__wrap">
+                          <div class="slider__item">
+                            <p class="slider__title">Номер</p>
+                            <p class="slider__value">EKG464SJFN17</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Дата рахунку</p>
+                            <p class="slider__value">10 грудня 2024 р</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Дата оплати</p>
+                            <p class="slider__value">10 грудня 2024 р</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Спосіб оплати</p>
+                            <p class="slider__value">$0077 **** **** 3814 (Visa)</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Підписка</p>
+                            <p class="slider__value">Бонус (річний)</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Сума</p>
+                            <p class="slider__value">$129.88</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider__box">
+                        <div class="slider__content">
+                          <p class="slider__elem">Статус</p>
+                          <span class="static__status static__status--end">Завершено</span>
+                        </div>
+                        <div class="slider__wrap">
+                          <div class="slider__item">
+                            <p class="slider__title">Номер</p>
+                            <p class="slider__value">EKG464SJFN17</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Дата рахунку</p>
+                            <p class="slider__value">10 грудня 2024 р</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Дата оплати</p>
+                            <p class="slider__value">10 грудня 2024 р</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Спосіб оплати</p>
+                            <p class="slider__value">$0077 **** **** 3814 (Visa)</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Підписка</p>
+                            <p class="slider__value">Бонус (річний)</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Сума</p>
+                            <p class="slider__value">$129.88</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </section>
+        </div>
+        <div class="ask">
+          <div class="container">
+             <a href="support.html" class="ask__image">
+                 <img src="../src/img/icons/ask.svg" alt="ask">
+              </a>
+          </div>
+        </div>
+      </div>
+
+       <section class="popup popup--add_card">
+        <div class="popup__inner">
+          <p class="popup__title">Додати нову карту</p>
+          <div class="popup__wrap">
+            <div class="popup__item">
+              <label for="add-card__number" class="label__inner">Номер карти</label>
+              <input placeholder="Номер карти" id="add-card__number" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="add-card__fio" class="label__inner">Ініціали, вказані на карті</label>
+              <input placeholder="Ім’я та прізвище" id="add-card__fio" class="input__inner">
+            </div>
+            <div class="popup__holder">
+             <div class="popup__item">
+                <label for="add-card__cvc" class="label__inner">CVC</label>
+                <input placeholder="****" id="add-card__cvc" class="input__inner">
+              </div>
+              <div class="popup__item">
+                <label for="add-card__date" class="label__inner">Дата завершення</label>
+                <input placeholder="MM / YY" id="add-card__date" class="input__inner">
+              </div>
+            </div>
+            <div class="popup__row">
+              <button class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button class="popup__btn popup__btn--inner">
+                <img src="../src/img/icons/plus-white.svg" alt="plus">
+                <span>Додати карту</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup--show_balance">
+        <div class="popup__inner">
+          <p class="popup__title">Вивести баланс</p>
+          <div class="popup__wrap">
+            <div class="popup__item">
+              <label for="show-balance__name" class="label__inner">Ім'я</label>
+              <input placeholder="Ім'я" id="show-balance__name" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="show-balance__number" class="label__inner">Номер карти</label>
+              <input placeholder="Номер карти" id="show-balance__number" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="show-balance__email" class="label__inner">Пошта</label>
+              <input placeholder="Пошта" id="show-balance__email" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="show-balance__sum" class="label__inner">Вивести суму</label>
+              <input placeholder="Вивести суму" id="show-balance__sum" class="input__inner">
+            </div>
+            <div class="popup__row">
+              <button class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button class="popup__btn popup__btn--inner">Вивести</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup--top_up_account">
+        <div class="popup__inner">
+          <p class="popup__title">Поповнення балансу</p>
+          <div class="popup__wrap">
+            <div class="popup__item">
+              <label for="top-up__number" class="label__inner">Номер карти</label>
+              <input placeholder="Номер карти" id="top-up__number" class="input__inner">
+            </div>
+            <div class="popup__holder">
+              <div class="popup__item">
+                <label for="top-up__date" class="label__inner">Термін дії</label>
+                <input placeholder="Термін дії" id="top-up__date" class="input__inner">
+              </div>
+              <div class="popup__item">
+                <label for="top-up__cvv2" class="label__inner">CVV2</label>
+                <input placeholder="CVV2" id="top-up__cvv2" class="input__inner">
+              </div>
+            </div>
+            <div class="popup__holder">
+              <div class="popup__item">
+                <label for="top-up__phone" class="label__inner">Номер телефону</label>
+                <input placeholder="Номер телефону" id="top-up__phone" class="input__inner">
+              </div>
+              <div class="popup__item">
+                <label for="top-up__email" class="label__inner">Email</label>
+                <input placeholder="Email" id="top-up__email" class="input__inner">
+              </div>
+            </div>
+            <div class="popup__item">
+              <label for="top-up__sum" class="label__inner">Сума</label>
+              <input placeholder="Сума" id="top-up__sum" class="input__inner">
+            </div>
+            <div class="popup__row">
+              <button class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button class="popup__btn popup__btn--inner">Поповнити</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <script src="../src/js/swiper-bundle.min.js"></script>
+        <script src="../dist/js/main.js"></script>
+
+    </body>
+</html>
