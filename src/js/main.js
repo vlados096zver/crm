@@ -280,6 +280,22 @@ document.addEventListener('click', function(event) {
     if (event.target.closest('.delete-profile')) {
       document.querySelector('.popup--delete_profile').classList.add('active');
     }
+    if (event.target.closest('.numbers-ladies')) {
+      document.querySelector('.popup--ladies').classList.add('active');
+    }
+    if (event.target.closest('.numbers-write-off')) {
+      document.querySelector('.popup--write-off').classList.add('active');
+    }
+    if (event.target.closest('.numbers-approve')) {
+      console.log('test')
+      document.querySelector('.popup--approve').classList.add('active');
+    }
+    if (event.target.closest('.numbers-notification')) {
+      document.querySelector('.popup--notification').classList.add('active');
+    }
+    if (event.target.closest('.numbers-balance')) {
+      document.querySelector('.popup--balance').classList.add('active');
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {

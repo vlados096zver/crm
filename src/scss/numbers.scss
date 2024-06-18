@@ -53,6 +53,11 @@
 				background-color: #36393E;
 			}
 		} 
+		&:nth-child(5)  {
+			&:after {
+				background-color: #FF7A00;
+			}
+		} 
 	}
 	&__title {
 		font-size: 24px;

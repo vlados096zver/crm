@@ -180,7 +180,7 @@
                             <p class="numbers__title">Ліди</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">601,78</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-ladies">
                                 <img src="../src/img/icons/edit.svg" alt="edit">
                               </button>
                             </div>
@@ -189,7 +189,7 @@
                             <p class="numbers__title">Списання</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">3002,49</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-write-off">
                                   <img src="../src/img/icons/edit.svg" alt="edit">
                               </button>
                             </div>
@@ -198,7 +198,7 @@
                             <p class="numbers__title">Approve</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">216</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-approve">
                                   <img src="../src/img/icons/edit.svg" alt="edit">
                               </button>
                             </div>
@@ -207,16 +207,16 @@
                             <p class="numbers__title">Сповіщення</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">212</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-notification">
                                     <img src="../src/img/icons/edit.svg" alt="edit">
                                 </button>
                             </div>
                           </div>
                           <div class="numbers__item">
-                              <p class="numbers__title">Сповіщення</p>
+                              <p class="numbers__title">Баланс</p>
                               <div class="numbers__inner">
                                 <p class="numbers__count">212</p>
-                                <button type="button" class="numbers__btn">
+                                <button type="button" class="numbers__btn numbers-balance">
                                     <img src="../src/img/icons/settings.svg" alt="settings">
                                 </button>
                               </div>
@@ -299,7 +299,7 @@
                             <p class="numbers__title">Ліди</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">601,78</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-ladies">
                                 <img src="../src/img/icons/edit.svg" alt="edit">
                               </button>
                             </div>
@@ -308,7 +308,7 @@
                             <p class="numbers__title">Списання</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">3002,49</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-write-off">
                                   <img src="../src/img/icons/edit.svg" alt="edit">
                               </button>
                             </div>
@@ -317,7 +317,7 @@
                             <p class="numbers__title">Approve</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">216</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-approve">
                                   <img src="../src/img/icons/edit.svg" alt="edit">
                               </button>
                             </div>
@@ -326,16 +326,16 @@
                             <p class="numbers__title">Сповіщення</p>
                             <div class="numbers__inner">
                               <p class="numbers__count">212</p>
-                              <button type="button" class="numbers__btn">
+                              <button type="button" class="numbers__btn numbers-notification">
                                     <img src="../src/img/icons/edit.svg" alt="edit">
                                 </button>
                             </div>
                           </div>
                           <div class="numbers__item">
-                              <p class="numbers__title">Сповіщення</p>
+                              <p class="numbers__title">Баланс</p>
                               <div class="numbers__inner">
                                 <p class="numbers__count">212</p>
-                                <button type="button" class="numbers__btn">
+                                <button type="button" class="numbers__btn numbers-balance">
                                     <img src="../src/img/icons/settings.svg" alt="settings">
                                 </button>
                               </div>
@@ -764,12 +764,98 @@
               <input id="p__sum" class="input__inner">
             </div>
             <div class="popup__row">
-              <button class="popup__btn popup__btn--cancel">Відмінити</button>
-              <button class="popup__btn popup__btn--inner">Зберегти</button>
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--inner">Зберегти</button>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="popup popup--ladies">
+        <div class="popup__inner">
+          <p class="popup__title">Внести зміни</p>
+          <div class="popup__wrap"> 
+            <div class="popup__item">
+                <label for="p__ladies" class="label__inner">Ліди</label>
+                <input id="p__ladies" class="input__inner">
+            </div>
+
+          <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--inner">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <section class="popup popup--write-off">
+        <div class="popup__inner">
+          <p class="popup__title">Внести зміни</p>
+          <div class="popup__wrap"> 
+            <div class="popup__item">
+                <label for="p__write-off" class="label__inner">Списання</label>
+                <input id="p__write-off" class="input__inner">
+            </div>
+            
+          <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--inner">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup--approve">
+        <div class="popup__inner">
+          <p class="popup__title">Внести зміни</p>
+          <div class="popup__wrap"> 
+            <div class="popup__item">
+                <label for="p__approve" class="label__inner">Approve</label>
+                <input id="p__approve" class="input__inner">
+            </div>
+            
+          <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--inner">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup--notification">
+        <div class="popup__inner">
+          <p class="popup__title">Внести зміни</p>
+          <div class="popup__wrap"> 
+            <div class="popup__item">
+                <label for="p__notification" class="label__inner">Сповіщення</label>
+                <input id="p__notification" class="input__inner">
+            </div>
+            
+          <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--inner">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup--balance">
+        <div class="popup__inner">
+          <p class="popup__title">Внести зміни</p>
+          <div class="popup__wrap"> 
+            <div class="popup__item">
+                <label for="p__balance" class="label__inner">Balance</label>
+                <input id="p__balance" class="input__inner">
+            </div>
+            
+          <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--inner">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
         <script src="../src/js/swiper-bundle.min.js"></script>
          <script src="../dist/js/main.js"></script>
