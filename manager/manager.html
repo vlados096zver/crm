@@ -136,8 +136,8 @@
                     </div>
                   </div>
                   <div class="about__inner">
-                    <button type="button" class="about__btn">Редагувати</button>
-                    <button type="button" class="about__btn">Видалити</button>
+                    <button type="button" class="about__btn edit-profile">Редагувати</button>
+                    <button type="button" class="about__btn delete-profile">Видалити</button>
                     <button type="button" class="about__btn">Вихід</button>
                   </div>
                 </div>
@@ -300,6 +300,31 @@
                             <p class="slider__title">Баланс</p>
                             <p class="slider__value">$1489</p>
                           </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Payout</p>
+                            <div class="slider__select">
+                              <div class="slider__option">
+                                <input checked="" name="block1" type="radio" class="slider__input" id="s_1">
+                                <label for="s_1" class="slider__label">RevShare</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block1" class="slider__input" id="s_2">
+                                <label for="s_2" class="slider__label">CPL</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block1" class="slider__input" id="s_3">
+                                <label for="s_3" class="slider__label">CPC</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block1" class="slider__input" id="s_4">
+                                <label for="s_4" class="slider__label">CPM</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block1" class="slider__input" id="s_5">
+                                <label for="s_5" class="slider__label">CPH</label>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -336,6 +361,31 @@
                           <div class="slider__item">
                             <p class="slider__title">Баланс</p>
                             <p class="slider__value">$1489</p>
+                          </div>
+                          <div class="slider__item">
+                            <p class="slider__title">Payout</p>
+                            <div class="slider__select">
+                              <div class="slider__option">
+                                <input checked="" name="block2" type="radio" class="slider__input" id="s_6">
+                                <label for="s_6" class="slider__label">RevShare</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block2" class="slider__input" id="s_7">
+                                <label for="s_7" class="slider__label">CPL</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block2" class="slider__input" id="s_8">
+                                <label for="s_8" class="slider__label">CPC</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block2" class="slider__input" id="s_9">
+                                <label for="s_9" class="slider__label">CPM</label>
+                              </div>
+                              <div class="slider__option">
+                                <input type="radio" name="block2" class="slider__input" id="s_10">
+                                <label for="s_10" class="slider__label">CPH</label>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -503,6 +553,54 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="popup popup--edit_profile">
+        <div class="popup__inner">
+          <p class="popup__title">Редагувати профіль</p>
+          <div class="popup__wrap">
+            <div class="popup__item">
+              <label for="profile_name" class="label__inner">Ім’я</label>
+              <input id="profile_name" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="profile_surname" class="label__inner">Прізвище</label>
+              <input id="profile_surname" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="profile_phone" class="label__inner">Номер телефону</label>
+              <input id="profile_phone" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="profile_email" class="label__inner">Пошта</label>
+              <input id="profile_email" class="input__inner">
+            </div>
+            <div class="popup__item">
+              <label for="profile_password" class="label__inner">Пароль</label>
+              <input type="password" id="profile_password" class="input__inner">
+            </div>
+            <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--add">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popup popup--delete_profile">
+        <div class="popup__inner">
+          <p class="popup__title">Видалити профіль</p>
+          <div class="popup__line"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="83" height="12" viewBox="0 0 83 12" fill="none">
+                <path d="M0.746029 6.11719L6.51953 11.8907L12.293 6.11719L6.51953 0.343685L0.746029 6.11719ZM82.7922 6.11719L77.0187 0.343685L71.2452 6.11719L77.0187 11.8907L82.7922 6.11719ZM6.51953 7.11719H77.0187V5.11719H6.51953V7.11719Z" fill="#3334FF"/>
+            </svg>
+          </div>      
+          <p class="popup__ask">Ви впевнені що хочете видалити профіль назавжди?</p>
+            <div class="popup__row">
+              <button type="button" class="popup__btn popup__btn--cancel">Відмінити</button>
+              <button type="button" class="popup__btn popup__btn--add">Видалити</button>
+            </div>
+          </div>
       </section>
 
           <script src="../src/js/swiper-bundle.min.js"></script>
