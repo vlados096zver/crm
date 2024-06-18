@@ -3,7 +3,7 @@
 .slider {
 	display: none;
 	@include media(mdx) {
-		display: block;
+		display: block;	
 		margin-bottom: 16px;
 	}
 	@include media(sm) {
@@ -28,16 +28,15 @@
 	}
 	&__box {
 		height: 100%;
-		border-radius: 42px;
-		box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
-		background-color: rgb(241, 244, 255);
+		border-radius: 40px;
+		background-color: #0E1218;
 		padding: 36px;
 		@include media(sm) {
 			padding: 18px;
 			border-radius: 20px;
 		}
 		&.active {
-			background-color: #71A9FF;
+			background-color: #0E1218;
 		}
 	}
 	&__content {
@@ -46,34 +45,37 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 5px;
-		margin-bottom: 46px;
+		margin-bottom: 40px;
 		@include media(sm) {
-			margin-bottom: 24px;
+			margin-bottom: 10px;
 		}
 	}
 	&__elem {
 		font-size: 45px;
-		color: #000;
+		color: #fff;
 		line-height: 1.2;
 		font-family: Public Sans, sans-serif;
 		@include media(sm) {
-			font-size: 22px;
+			font-size: 16px;
 		}
 	}
 	&__row {
 		display: flex;
 		align-items: center;
-		gap: 0 40px;
+		gap: 0 30px;
 		@include media(sm) {
-			gap: 0 20px;
+			gap: 0 16px;
+		}
+		.slider__value {
+			margin-bottom: 0;	
 		}
 	}
 	&__wrap {
 		display: flex;
 		flex-direction: column;
-		gap: 56px 0;
+		gap: 40px 0;
 		@include media(sm) {
-			gap: 24px 0;
+			gap: 14px 0;
 		}
 	}
 	&__item {
@@ -101,11 +103,11 @@
 	&__title {
 		font-size: 45px;
 		line-height: 1.2;
-		color: #000;
-		margin-bottom: 7px;
+		color: #fff;
+		margin-bottom: 10px;
 		font-family: Public Sans, sans-serif;
 		@include media(sm) {
-			font-size: 22px;
+			font-size: 16px;
 		}
 	}
 	&__meta {
@@ -125,17 +127,17 @@
 	&__value {
 		font-size: 35px;
 		line-height: 1.2;
-		color: #000;
+		color: #fff;
 		margin-bottom: 6px;
 		font-family: Public Sans, sans-serif;
 		@include media(sm) {
-			font-size: 17px;
+			font-size: 14px;
 		}
 	}
 	&__status {
 		width: 100%;
 		font-size: 35px;
-		color: #000;
+		color: #fff;
 		font-family: Public Sans, sans-serif;
 		@include media(sm) {
 			font-size: 17px;
@@ -150,7 +152,7 @@
 		border-radius: 42px;
 		box-shadow: 0px 8px 42px 0px rgba(0, 0, 0, 0.25);
 		color: #fff;
-		background: linear-gradient(90.00deg, rgb(112, 169, 255),rgb(49, 110, 201) 57%,rgb(1, 73, 180) 100%);
+		background: #3334FF;
 		padding: 20px 82px;	
 		margin: 0 auto;
 		margin-top: 26px;
@@ -166,7 +168,7 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: 20px;
-		background-color: #F1F4FF;
+		background-color: #0E1218;
 		padding: 23px 24px;
 		margin-bottom: 12px;
 		@include media(sm) {
@@ -213,6 +215,7 @@
 		padding: 38px 24px;
 		margin-bottom: 24px;
 		@include media(mdx) {
+			background-color: #0E1218;
 			padding: 38px 24px;
 			margin-bottom: 14px;
 		}
@@ -242,6 +245,9 @@
 		margin-bottom: 8px;
 		font-weight: 500;
 		font-family: DM Sans, sans-serif;
+		@include media(mdx) {
+			color: #fff;
+		}
 		@include media(sm) {
 			font-size: 12px;
 		}
@@ -257,6 +263,9 @@
 		color: rgb(0, 0, 0);
 		font-weight: 700;
 		font-family: DM Sans, sans-serif;
+		@include media(mdx) {
+			color: #fff;
+		}
 		@include media(sm) {
 			font-size: 19px;
 		}
@@ -270,6 +279,9 @@
 		font-size: 45px;
 		color: #000000;
 		font-family: Public Sans, sans-serif;
+		@include media(mdx) {
+			color: #fff;
+		}
 		@include media(sm) {
 			font-size: 22px;
 		}
@@ -345,6 +357,10 @@
 		background-color: rgb(241, 244, 255);
 		padding: 31px 40px;
 		font-family: Public Sans, sans-serif;
+		@include media(mdx) {
+			background-color: #1E1E1E;
+			color: #fff;
+		}
 		@include media(sm) {
 			font-size: 14px;
 			border-radius: 20px;
@@ -352,8 +368,9 @@
 		}
 	}
 	&__name {
-		font-size: 33px;
-		color: #000000;
+		font-size: 35px;
+		color: #fff;
+		margin-bottom: 2px;
 		font-family: Public Sans, sans-serif;
 		@include media(sm) {
 			font-size: 17px;
@@ -361,7 +378,7 @@
 	}
 	&__slogan {
 		font-size: 24px;
-		color: #000000;
+		color: #fff;
 		font-family: Public Sans, sans-serif;
 		@include media(sm) {
 			font-size: 12px;
@@ -369,15 +386,64 @@
 	}
 	&__pic {
 		max-width: 116px;
-		margin-top: -14px;
-		margin-bottom: 5px;
+		margin-top: -10px;
+		margin-bottom: 10px;
 		@include media(sm) {
 			max-width: 54px;
-			margin-top: -10px;
+			margin-top: 12px;
 			margin-bottom: 8px;
 		}
 		img {
 			display: block;
+			max-width: 100%;
+		}
+	}
+	&__select {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding-top: 12px;
+		@include media(sm) {
+			gap: 10px 8px;
+			padding-top: 6px;
+		}
+	}
+	&__input {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		&:checked + label {
+			background-color: #3334FF;
+		}
+	}
+	&__label {
+		display: block;
+		font-size: 21px;
+		color: #fff;
+		background-color: #181A1E;
+		border-radius: 30px;
+		padding: 18px 36px;
+		@include media(sm) {
+			font-size: 14px;
+			padding: 8px 14px;
+		}
+	}
+	&__wrap-content {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+	&__symbol {
+		max-width: 40px;
+		width: 100%;
+		@include media(sm) {
+			max-width: 30px;
+		}
+		img {
+			display: block;
+			width: 100%;
 			max-width: 100%;
 		}
 	}

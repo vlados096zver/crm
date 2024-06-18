@@ -1,0 +1,133 @@
+@import 'responsive';
+
+.target {
+	&__text {
+		font-size: 150px;
+		line-height: 1.3;
+		background: linear-gradient(132.61deg, rgb(45, 41, 255),rgb(68, 119, 253),rgb(255, 255, 255));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-bottom: 210px;
+		font-weight: 700;
+		font-family: DM Sans, sans-serif;
+		@include media(mdx) {
+			font-size: 58px;	
+			margin-bottom: 80px;	
+		}
+		@include media(sm) {
+			font-size: 35px;	
+			margin-bottom: 40px;	
+		}
+	}
+	&__card {
+		position: relative;
+		margin-bottom: 300px;
+		@include media(mdx) {
+			margin-bottom: 80px;	
+		}
+		@include media(sm) {
+			margin-bottom: 40px;	
+		}
+		&--profile {
+			margin-bottom: 180px;
+			@include media(mdx) {
+				margin-bottom: 60px;	
+			}
+			.target__desc {
+				&:nth-child(1) {
+					top: 21%;
+					width: calc(100% - 535px + 80px);
+				}
+				&:nth-child(2) {
+					top: 55%;
+					width: calc(100% - 535px + 80px);
+				}
+			}
+		}
+	}
+	&__desc {
+		position: absolute;
+		font-size: 40px;
+		line-height: 1.2;
+		color: rgb(255, 255, 255);
+		border-top: 3px solid #2E2CFF;
+		padding-top: 20px;
+		font-weight: 700;
+		font-family: DM Sans, sans-serif;
+		@include media(mdx) {
+			display: none;	
+		}
+		&:nth-child(1) {
+			top: 29%;
+			width: calc(100% - 535px + 140px);
+		}
+		&:nth-child(2) {
+			top: 47%;
+			width: calc(100% - 535px + 70px);
+		}
+		&:nth-child(3) {
+			top: 76%;
+			width: calc(100% - 535px + 90px);
+		}
+	}
+	&__image {
+		max-width: 535px;
+		margin-left: auto;
+		@include media(mdx) {
+			margin: 0 auto;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+	&__wrap-pic {
+		padding-bottom: 260px;
+		@include media(mdx) {
+			padding-bottom: 40px;	
+		}
+	}
+	&__pic {
+		margin-bottom: 68px;
+		@include media(mdx) {
+			margin-bottom: 20px;	
+		}
+		@include media(sm) {
+			margin-bottom: 16px;	
+		}
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+	&__info {
+		font-size: 150px;
+		line-height: 1.3;
+		background: linear-gradient(-31.80deg, rgb(46, 45, 255),rgb(77, 132, 253),rgb(229, 240, 255));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-bottom: 340px;
+		font-weight: 700;
+		font-family: DM Sans, sans-serif;
+		@include media(mdx) {
+			font-size: 58px;	
+			margin-bottom: 50px;	
+		}
+		@include media(sm) {
+			font-size: 35px;	
+		}
+		&--inner {
+			margin-bottom: 200px;
+			@include media(mdx) {
+				margin-bottom: 50px;	
+			}
+		}
+		span {
+			display: block;
+			background: linear-gradient(90.00deg, rgb(229, 240, 255),rgb(87, 145, 252),rgb(47, 47, 255));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-align: right;
+		}
+	}
+}

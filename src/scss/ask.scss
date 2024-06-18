@@ -2,7 +2,6 @@
 
 .ask {
 	display: none;
-	background: linear-gradient(180.00deg, rgb(112, 169, 255),rgb(1, 73, 180) 100%,rgb(49, 110, 201) 100%);
 	@include media(mdx) {
 		display: block;
 		padding: 27px 0;

@@ -2,10 +2,11 @@
 
 .support {
 	overflow: hidden;
+	padding-top: 10px;	
 	margin-bottom: 70px;
 	@include media(mdx) {
-		padding: 0 10px;
-		padding-top: 16px;
+		padding: 16px;
+		padding-bottom: 0;
 		margin-bottom: 28px;
 	}
 	@include media(sm) {
@@ -32,7 +33,7 @@
 			width: 100%;
 			margin: 0;
 			border-radius: 42px;
-			background-color: #F1F4FF;
+			background-color: #0E1218;
 			padding: 36px;
 			padding-right: 84px;
 		}
@@ -53,7 +54,6 @@
 		display: flex;	
 		align-items: center;
 		justify-content: center;
-		background-color: #F1F4FF;
 		border-radius: 20px;
 		@include media(mdx) {
 			display: none;
@@ -75,7 +75,7 @@
 		position: relative;
 		font-size: 20px;
 		line-height: 1.2;
-		color: #000;
+		color: #fff;
 		font-family: Public Sans, sans-serif;
 		@include media(mdx) {
 			font-size: 45px;
@@ -93,8 +93,8 @@
 				width: 12px;
 				height: 12px;
 				content: ' ';
-				border-right: 2px solid #000;
-				border-bottom: 2px solid #000;
+				border-right: 2px solid #fff;
+				border-bottom: 2px solid #fff;
 				pointer-events: none;
 				transform: rotate(45deg);
 				transition: 0.3s transform, 0.3s top;
@@ -125,7 +125,7 @@
 		p {
 			font-size: 16px;
 			line-height: 1.2;
-			color: rgb(67, 67, 67);
+			color: #fff;
 			font-family: Public Sans, sans-serif;
 			@include media(mdx) {
 				font-size: 24px;

@@ -1,14 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-   let sliderBalance = document.querySelector('.swiper-balance');
+ let sliderBalance = document.querySelector('.swiper-balance');
   if (sliderBalance) {
     let swiper = new Swiper(".swiper-balance", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 0,
+      loopAdditionalSlides: 1
     })
   }
 
+document.addEventListener('DOMContentLoaded', function() {
+  
   let sliderMob = document.querySelector('.swiper-mob');
   if (sliderMob){
       let swiper = new Swiper(".swiper-mob", {
@@ -273,6 +274,12 @@ document.addEventListener('click', function(event) {
     if (event.target.closest('.top_up-balance')) {
       document.querySelector('.popup--top_up_account').classList.add('active');
     }
+    if (event.target.closest('.edit-profile')) {
+      document.querySelector('.popup--edit_profile').classList.add('active');
+    }
+    if (event.target.closest('.delete-profile')) {
+      document.querySelector('.popup--delete_profile').classList.add('active');
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -280,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     selectElements.forEach(selectElement => {
         const customSelect = selectElement.closest('.custom-select__block');
+        console.log(customSelect);
         const customOptions = document.createElement('div');
         customOptions.classList.add('custom-select__options');
 
@@ -300,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectElement.value = option.value;
                 customSelect.dataset.content = option.textContent;
                 customOptions.classList.remove('visible');
+                customOptions.remove();
                 event.stopPropagation();
             });
 
@@ -314,19 +323,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         customSelect.dataset.content = initialSelectedOption.textContent;
-        customSelect.appendChild(customOptions);
+
+        const positionCustomOptions = () => {
+            const optionsRect = customSelect.getBoundingClientRect();
+            const screenHeight = window.innerHeight;
+            const heightSelect = customSelect.offsetHeight;
+            console.log(customOptions.offsetHeight, optionsRect.top)
+           if (screenHeight < optionsRect.top + customOptions.offsetHeight) {
+            customOptions.style.top = optionsRect.top - customOptions.offsetHeight + heightSelect + 'px';
+           } else {
+            customOptions.style.top = optionsRect.top  + 'px';
+          }
+            customOptions.style.left = optionsRect.left + 'px';
+        };
 
         customSelect.addEventListener('click', (event) => {
             event.stopPropagation();
+            document.querySelectorAll('.custom-select__options.visible').forEach(visibleOptions => {
+                visibleOptions.classList.remove('visible');
+                visibleOptions.remove();
+            });
+            document.body.appendChild(customOptions);
             customOptions.classList.toggle('visible');
+            positionCustomOptions();
         });
+
+        window.addEventListener('resize', positionCustomOptions);
+        window.addEventListener('scroll', positionCustomOptions);
+         const tableWrap = document.querySelector('.table__container');
+        if (tableWrap) {
+            tableWrap.addEventListener('scroll', () => {
+                customOptions.classList.remove('visible');
+                customOptions.remove();
+            });
+        }
 
         document.addEventListener('click', () => {
             customOptions.classList.remove('visible');
+            customOptions.remove();
         });
     });
 });
-
 
 const popupBlocks = document.querySelectorAll('.popup__block');
 
